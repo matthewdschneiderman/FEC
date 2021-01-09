@@ -1,7 +1,7 @@
 import React from 'react';
 import PreviewListContainer from '../../../../containers/productContainers/previewListContainer.js';
 
-import defaultImg from '../../../../../image-not-available.jpg';
+import defaultImg from '../../../../dist/images/image-not-available.jpg';
 
 const Carousel = ({currentStyle, carouselPosition, handleCarouselChange, handleCenterImageClick}) => {
   let leftButtonClass = 'arrow-carousel left-carousel';

@@ -1,7 +1,8 @@
 node_modules/
 
-dist/bundle.js
-dist/bundle.js.*
+client/dist/bundle.js
+client/dist/bundle.js.*
+client/dist/*.jpg
 
 package-lock.json
 coverage/clover.xml

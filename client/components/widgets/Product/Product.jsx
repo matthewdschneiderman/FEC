@@ -10,7 +10,7 @@ import ExpandedViewContainer from '../../../containers/productContainers/expande
 import getProduct from '../../../actions/productOverview/getProduct.js';
 import store from '../../../store/store.js';
 import getStyles from '../../../actions/productOverview/getStyles.js';
-import defaultImg from '../../../../image-not-available.jpg';
+import defaultImg from '../../../dist/images/image-not-available.jpg';
 import findSaleStyle from '../../../../util/findSaleStyle.js';
 
 const Product = ({expandedView, currentStyle, carouselPosition, styles}) => {
