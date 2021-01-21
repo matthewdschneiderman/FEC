@@ -173,28 +173,30 @@ const Questions = (props) => {
           </div>
         </div>
       </div>
-    <div className="row question-configuration">
-        {questions.map((question) => (
-          <div>
-            <div className="question_column_one">
-              <div className="question-text"><div className="full-question">Q:</div><div className="question-container">{question.question_body}</div></div>
-              <Answers key={question.question_id.toString()} question={question} answerBoolean={props.answerBoolean} moreAnswers={props.moreAnswers} answerHelpful={(answerId) => props.answerHelpful(answerId, props.votedAnswer, props.id)} reportAnswer={(answerId, answer, questionID) => props.reportAnswer(answerId, answer, questionID, props.id)} reportedAnswer={props.reportedAnswer} underReview={props.underReview}/>
-            </div>
-              <div className="question_column_two">
-                  <div className="help-nav">Helpful? <span className="btn_words yes-nav" onClick={() => props.questionHelpful(question.question_id, props.votedAlready, props.id)}>Yes ({question.question_helpfulness})</span>|<span className='add-answer'><a href="#openModal-answers" className="answer-anchor" onClick={() => getId(question.question_id, question.question_body, props.productName)}>Add Answer</a></span></div>
+    <div>
+          <div className="row question-configuration">
+            {questions.map((question) => (
+              <div>
+                <div className="question_column_one">
+                  <div className="question-text"><div className="full-question">Q:</div><div className="question-container">{question.question_body}</div></div>
+                  <Answers key={question.question_id.toString()} question={question} answerBoolean={props.answerBoolean} moreAnswers={props.moreAnswers} answerHelpful={(answerId) => props.answerHelpful(answerId, props.votedAnswer, props.id)} reportAnswer={(answerId, answer, questionID) => props.reportAnswer(answerId, answer, questionID, props.id)} reportedAnswer={props.reportedAnswer} underReview={props.underReview}/>
+                </div>
+                  <div className="question_column_two">
+                      <div className="help-nav">Helpful? <span className="btn_words yes-nav" onClick={() => props.questionHelpful(question.question_id, props.votedAlready, props.id)}>Yes ({question.question_helpfulness})</span>|<span className='add-answer'><a href="#openModal-answers" className="answer-anchor" onClick={() => getId(question.question_id, question.question_body, props.productName)}>Add Answer</a></span></div>
+                  </div>
               </div>
+                    ))}
           </div>
-                ))}
           <div className="row">
             <div className="question_column_one">
                 {(() => {
                   if (questions.length < props.questions.length) {
-                  return (<div><span><button className="more-questions" onClick={() => props.moreQuestions(props.numRender + 2)}>MORE ANSWERED QUESTION</button></span></div>)
+                  return (<div><span><button style={{cursor: "pointer"}} className="more-questions" onClick={() => props.moreQuestions(props.numRender + 2)}>MORE ANSWERED QUESTION</button></span></div>)
                 } else {
                   return null;
                 }
               })()}
-              <div className="button-lineup"><div className="anchor-wrap"><a href="#openModal-questions" className="add-quest" onClick={() => getName(props.productName)}>ADD A QUESTION  +</a></div></div>
+              <a onClick={() => getName(props.productName)} href="#openModal-questions" className="button-lineup" style={{cursor: "pointer", textDecoration: 'none'}}><div className="anchor-wrap"><div className="add-quest">ADD A QUESTION  +</div></div></a>
               <div id="openModal-questions" className="modalForm">
                 <div>
                   <a href="#leave" title="shut" className="shut">X</a>
