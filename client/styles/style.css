@@ -1071,7 +1071,7 @@ Start of Q and A
 }
 
 .question-configuration {
-  max-height: 50vh;
+  max-height: 100vh;
   overflow-y: auto;
   position: relative;
 }

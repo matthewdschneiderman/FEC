@@ -62,4 +62,4 @@ Related Products provides clients with a carousel of products related to the ove
 
 The Questions and Answers section allows clients to not only inquire about specific products, but also provide answers and feedback based on their own experiances. The seller also has the freedom to answer any given questions, which will be pinned at the top, above all other answers. Questions and Answers are sorted by how useful they were to clients (selecting YES to Helpful?). Clients have the ability to filter questions, report questions/answers(they will be removed and reviewed), and click for additional questions/answers. Questions and answers can be added by clients when appropriate buttons are clicked.
 
-<!-- ![]() -->
+![](https://github.com/team-daifuku/FEC/blob/master/Qs_and_As.gif)
